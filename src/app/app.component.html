@@ -1,0 +1,8 @@
+<GridLayout rows="*, auto">
+  <page-router-outlet row="0"></page-router-outlet>
+  <GridLayout row="1" columns="*,*,*" class="bottom-nav">
+    <Button col="0" text="Buscar" [nsRouterLink]="['/search']"></Button>
+    <Button col="1" text="Favoritos" [nsRouterLink]="['/favorites']"></Button>
+    <Button col="2" text="Settings" [nsRouterLink]="['/settings']"></Button>
+  </GridLayout>
+</GridLayout>

@@ -1,0 +1,26 @@
+<GridLayout rows="auto, auto, auto, *" class="page">
+  <StackLayout row="0" class="header">
+    <Label text="BookPulse" class="header-title"></Label>
+    <Label text="Buscar libros desde Express + NgRx" color="white"></Label>
+  </StackLayout>
+
+  <GridLayout row="1" columns="*, auto" class="card">
+    <TextField col="0" hint="Ej. angular" [(ngModel)]="query"></TextField>
+    <Button col="1" text="Buscar" class="primary" (tap)="search()"></Button>
+  </GridLayout>
+
+  <Label row="2" [text]="loading ? 'Consultando API...' : 'Resultados'" class="section-title"></Label>
+
+  <ListView row="3" [items]="books">
+    <ng-template let-book="item">
+      <GridLayout columns="*, auto" class="card">
+        <StackLayout col="0">
+          <Label [text]="book.title" class="title"></Label>
+          <Label [text]="book.author" class="subtitle"></Label>
+          <Label [text]="book.category" class="subtitle"></Label>
+        </StackLayout>
+        <Label col="1" text="☆" class="favorite" (tap)="favorite(book)"></Label>
+      </GridLayout>
+    </ng-template>
+  </ListView>
+</GridLayout>

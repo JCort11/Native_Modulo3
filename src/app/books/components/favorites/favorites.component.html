@@ -1,0 +1,22 @@
+<GridLayout rows="auto, *, auto" class="page">
+  <StackLayout row="0" class="header">
+    <Label text="Favoritos" class="header-title"></Label>
+  </StackLayout>
+
+  <ListView row="1" [items]="favorites$ | async">
+    <ng-template let-book="item">
+      <GridLayout columns="*, auto, auto" class="card">
+        <StackLayout col="0">
+          <Label [text]="book.title" class="title"></Label>
+          <Label [text]="book.author" class="subtitle"></Label>
+        </StackLayout>
+        <Button col="1" text="Leer ahora" class="primary" (tap)="read(book)"></Button>
+        <Button col="2" text="X" (tap)="remove(book)"></Button>
+      </GridLayout>
+    </ng-template>
+  </ListView>
+
+  <StackLayout row="2" class="card">
+    <Label text="Lo que envías con “Leer ahora” se refleja en Settings mediante el Store." class="subtitle" textWrap="true"></Label>
+  </StackLayout>
+</GridLayout>

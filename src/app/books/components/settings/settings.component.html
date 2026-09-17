@@ -1,0 +1,25 @@
+<ScrollView class="page">
+  <StackLayout>
+    <StackLayout class="header">
+      <Label text="Settings" class="header-title"></Label>
+    </StackLayout>
+
+    <StackLayout class="card">
+      <Label text="Nombre de usuario" class="title"></Label>
+      <TextField [(ngModel)]="username" hint="Tu nombre"></TextField>
+      <Button text="Guardar nombre" class="primary" (tap)="save()"></Button>
+      <Label text="Se guarda con ApplicationSettings y permanece después de cerrar la app." class="subtitle" textWrap="true"></Label>
+    </StackLayout>
+
+    <Label text="Leyendo ahora" class="section-title"></Label>
+
+    <ListView [items]="readingNow$ | async">
+      <ng-template let-book="item">
+        <StackLayout class="card">
+          <Label [text]="book.title" class="title"></Label>
+          <Label [text]="book.author" class="subtitle"></Label>
+        </StackLayout>
+      </ng-template>
+    </ListView>
+  </StackLayout>
+</ScrollView>

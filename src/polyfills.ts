@@ -1,0 +1,1 @@
+import '@nativescript/core/globals';

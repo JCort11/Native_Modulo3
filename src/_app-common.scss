@@ -1,0 +1,13 @@
+@import '@nativescript/theme/core';
+@import '@nativescript/theme/default';
+
+.page { background-color: #f5f7fa; }
+.header { padding: 16; background-color: #12355b; }
+.header-title { color: white; font-size: 22; font-weight: bold; }
+.section-title { font-size: 24; font-weight: bold; margin: 14; }
+.card { background-color: white; margin: 8 12; padding: 12; border-radius: 12; }
+.subtitle { color: #667085; font-size: 13; }
+.title { font-size: 18; font-weight: bold; }
+.primary { background-color: #3b82f6; color: white; }
+.favorite { font-size: 28; color: #f59e0b; }
+.empty { color: #667085; font-size: 16; }
