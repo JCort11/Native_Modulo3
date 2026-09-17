@@ -23,8 +23,3 @@ npm install
 npm start
 ```
 
-Después inicia ngrok para el puerto 3000 y cambia `apiUrl` en:
-`src/app/core/app-config.ts`.
-
-La URL debe ser HTTPS, por ejemplo:
-`https://tu-tunel.ngrok-free.app/api/books`
